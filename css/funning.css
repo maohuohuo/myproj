@@ -1,0 +1,209 @@
+/*全局*/
+html{
+    font-size: 62.5%;
+    height:100%;
+}
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+a:link,a:visited{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+a:hover{
+    color: green;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+img{
+    height: 8rem;
+    width: 8rem;
+}
+/*导航栏-------------------------------------------------------*/
+.nov{
+    border-bottom: 0.1rem solid;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    display: flex;
+    justify-content: flex-end;  /*flex布局;*/
+
+}
+.nov li{
+    display: inline;
+    padding-right: 1rem;
+    border-right:0.1rem solid black;
+}
+.nov_left{
+    position: absolute;
+    left: 3rem;
+}
+/*总体-----------------------------------------------------------*/
+.main-body{
+    margin: auto;
+}
+/*侧边栏---------------------------------------------------------*/
+.Sidebar{
+    min-height: 100rem;
+    text-align: center;
+    width: 15%;
+    border-right: 0.1rem solid;
+    float: left;   /*浮动*/
+}
+.hot li{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+.hot a{
+    border-top: 0.1rem solid;
+    color: #ff9a88;
+}
+h3{
+    font-size: 2rem;
+}
+/*主要内容---------------------------------------------------------*/
+.content{
+    width: 81%;
+    float: left;
+    text-align: center;
+    padding-top: 5rem;
+}
+
+/*头部--------------------------------------------------------------*/
+.sousuo{
+    width: 60rem;
+    margin: auto;
+}
+.recommend{
+    padding-left: 1rem;
+    padding-top: 5rem;
+    height: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+h2{
+    padding-top: 5rem;
+    font-family: 'TSSunOld1c7cc69c32208fe', serif; /*网络字体*/
+    font-size: 3rem;
+}
+.recomend_img{
+    width: 25rem;
+    padding-top: 5rem;
+    padding-left: 10rem;
+    display:inline-flex;
+    align-items: center;
+}
+.tit{
+    text-align: left;
+}
+/*底部----------------------------------------------------------------*/
+.content_buttom{
+    clear: both;
+    background-color: #222222;
+    color: #d0ffae;
+    text-align: center;
+}
+/*响应式布局----------------------------------------------------------------*/
+@media only screen and (max-width: 500px) {
+    .Sidebar{
+        display: none;
+    }
+    .content{
+        width: 99%;
+        padding: 0;
+    }
+    .recomend_img{
+        width: 20rem;
+    }
+    .recommend{
+        padding-left: 0;
+    }
+    .sousuo{
+        width: 30rem;
+    }
+    .content_buttom{
+        display: none;
+    }
+}
+@media only screen and (max-width: 399px) {
+    .Sidebar{
+        display: none;
+    }
+    .content{
+        width: 99%;
+        padding: 0;
+    }
+    img{
+        height: 4rem;
+        width: 4rem;
+    }
+    .recommend{
+        padding-left: 9rem;
+    }
+    .recomend_img{
+        width: 20rem;
+    }
+    .sousuo{
+        width: 30rem;
+    }
+    .content_buttom{
+        display: none;
+    }
+}
+
+/*侧边栏-----------------------------------------------------------------------------*/
+#side{
+    width: 20rem;
+    height: 50rem;
+    display: none;
+    border: 1px solid;
+
+}
+.myside li{
+    display: block;
+    list-style-type: none;
+    border-top: 0.5px solid #000000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+
+}
+
+.myside{  /*列表*/
+    position: relative;
+    top: 5rem;
+    clear: right;
+
+}
+.myside li a{
+    color: #000000;
+}
+#leftside{
+    float: left;
+    transition: 0.5s;
+    background-color: #f5ffec;
+
+}
+.closebtn{
+    float: right;
+}
+.dakai{
+
+    display: inline;
+}
+.sidenov{
+   float: right;
+    position: fixed;
+    z-index: 1;
+
+}
+

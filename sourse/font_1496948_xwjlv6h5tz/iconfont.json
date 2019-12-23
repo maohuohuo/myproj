@@ -1,0 +1,72 @@
+{
+  "id": "1496948",
+  "name": "icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "433395",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "7549348",
+      "name": "搜索",
+      "font_class": "RectangleCopy",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "11200585",
+      "name": "赞",
+      "font_class": "zan",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "11200586",
+      "name": "喜欢",
+      "font_class": "xihuan",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11474240",
+      "name": "collection",
+      "font_class": "collection",
+      "unicode": "e6f1",
+      "unicode_decimal": 59121
+    },
+    {
+      "icon_id": "11474244",
+      "name": "Customer management",
+      "font_class": "Customermanagement",
+      "unicode": "e6f3",
+      "unicode_decimal": 59123
+    },
+    {
+      "icon_id": "11474268",
+      "name": "good",
+      "font_class": "good",
+      "unicode": "e6f8",
+      "unicode_decimal": 59128
+    },
+    {
+      "icon_id": "11519572",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "11519587",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    }
+  ]
+}

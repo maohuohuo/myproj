@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>有趣的游戏</title>
+    <link rel="stylesheet" href="css/funning.css">
+    <link rel="stylesheet" type="text/css" href="sourse/normalize.css"><!--排印-->
+    <link rel="stylesheet" href="sourse/font_1496948_xwjlv6h5tz/iconfont.css"><!--图标字体-->
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!--响应式布局-->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<body>
+    <div class="sidenov"><!--侧边栏-->
+        <span style="font-size:30px; cursor:pointer" onclick="openNav()" class="dakai">&#9776;</span>
+        <div id="leftside">
+            <div id="side" >
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: white">&times;</a>
+                <ul class="myside">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a class="btn btn-default" href="fun_game.html" role="button">有趣的游戏</a></li>
+                    <li><a class="btn btn-default" href="Useful_tools.html" role="button">实用的工具</a></li>
+                    <li><a class="btn btn-default" href="boring.html" role="button">无聊的网页</a></li>
+                    <li><a class="btn btn-default" href="Shocking_web.html" role="button">震撼的网页</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="nov"><!--导航栏-->
+        <ul>
+            <li class="nov_left"><a href="index.html">首页</a></li>
+            <li class="nov_right"><a href="#"><i class="iconfont icongerenzhongxin"></i> 个人中心</a></li>
+            <li class="nov_right"><a href="login.html">登陆</a></li>
+        </ul>
+    </div>
+    <div class="main-body"><!--总体-->
+        <div class="Sidebar"><!--侧边栏-->
+            <h3>热门</h3>
+            <ul class="hot" id="app1">
+                <li v-for="hot in hot"><a v-bind:href="hot.link">{{hot.tit}}</a></li>
+            </ul>
+        </div>
+        <div class="content"><!--主要内容-->
+            <div class="content_top"><!--头部-->
+                <form action="#">
+                    <input type="text" name="sosuo" class="sousuo">
+                    <a href="#"><i class="iconfont iconRectangleCopy"></i></a>&nbsp<a href="#"><input type="submit" name="so" value="搜索"></a>
+                </form>
+                <h2>有趣的小游戏推荐</h2>
+                <div class="recommend"  id="app2" >
+                    <div class="recomend_img" v-for="pic in pic">
+                        <a v-bind:href=pic.hre><img v-bind:src=pic.img alt="图片" ></a>
+                        <span class="tit">{{pic.tit}}<p>{{pic.recon}}</p></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="content_buttom"><!--底部-->
+            <p>制作人：卯升获</p>
+            <p>来源:网络</p>
+        </div>
+    </div>
+</body>
+<script src="sourse/vue.js"></script>
+<script>
+    let vn=new Vue({
+        el:'#app2',
+        data:{
+            pic:[
+                {
+                    hre:"http://nazo.one-story.cn/",
+                    img:"img/pic01.ico",
+                    tit:"Nazo Game",
+                    recon:"是一个计算机有关的解密小游戏"
+                },
+                {
+                    hre:"http://diep.io/",
+                    img:"img/pic_010.png",
+                    tit:"Diep",
+                    recon:"每个玩家都是一枚小坦克，点击鼠标发射炮弹（红点点）"
+                },
+                {
+                    hre:"http://slither.io/",
+                    img:"img/game_002.png",
+                    tit:"Slither",
+                    recon:"多人在线游戏，鼠标控制一条蚯蚓，通过吃周围发光的点来变粗变长"
+                },
+                {
+                    hre:"http://flapmmo.com/",
+                    img:"img/game_003.png",
+                    tit:"Squishybird ",
+                    recon:"这个就是flappybird，但是不同的是它是个多人在线游戏"
+                },
+                {
+                    hre:"https://geoguessr.com/",
+                    img:"img/game_046.ico",
+                    tit:"GeoGuessr",
+                    recon:"给你任意一个地方的google街景，让你猜测这是哪里，并在图中右下角的世界地图上做标记"
+                },
+                {
+                    hre:"https://lines.frvr.com/",
+                    img:"img/game_035.png",
+                    tit:"Play Lines",
+                    recon:"就是把相同颜色的点都连接起来，路径不能有重叠"
+                },
+                {
+                    hre:"https://hex.frvr.com/",
+                    img:"img/game_027.png",
+                    tit:" Hexagon",
+                    recon:"玩法和1010相同，把右侧随机出现的色块放进六边形的“棋盘”里，每填满一行或一斜列就能消除，同时消除多行/列有附加分。"
+                },
+                {
+                    hre:"https://aidn.jp/mikutap/",
+                    img:"img/game_050.ico",
+                    tit:"Mikutap",
+                    recon:"带上耳机，能玩很久"
+                },
+                {
+                    hre:"http://mope.io/",
+                    img:"img/game_004.png",
+                    tit:"mope",
+                    recon:".io游戏，吃经验，防止老鹰"
+                },
+                {
+                    hre:"http://green.ssyar.com/",
+                    img:"img/game_005.png",
+                    tit:"原谅帽大作战",
+                    recon:"听名字就很魔性"
+                },
+                {
+                    hre:"http://play.ziyuantun.com/",
+                    img:"img/game_002.ico",
+                    tit:"资源屯·欢乐时光",
+                    recon:"里面有一些好玩的小游戏"
+                },
+                {
+                    hre:"https://gfw.tapirgames.com/",
+                    img:"img/game_06.png",
+                    tit:"貘艺",
+                    recon:"里面也有一些好玩的小游戏"
+                },
+                {
+                    hre:"https://www.linerider.com/",
+                    img:"img/game_006.ico",
+                    tit:"线条骑行者",
+                    recon:"用线条画一条线，小人就会沿着轨迹走。订制一条特殊的路线，让小人在你的线条上翻跟斗滑下去"
+                },
+                {
+                    hre:"http://hell.one-story.cn/hell-start.html",
+                    img:"img/game_007.png",
+                    tit:"hell.one-story",
+                    recon:"也是一个计算机有关的解密小游戏"
+                },
+                {
+                    hre:"http://weavesilk.com/",
+                    img:"img/game_008.png",
+                    tit:"silk",
+                    recon:"一个对称绘画的网站"
+                }
+            ]
+        }
+    })
+</script>
+<script>
+    let vn1=new Vue({
+        el:'#app1',
+        data:{
+            hot:[
+                {
+                    link:"http://hell.one-story.cn/hell-start.html",
+                    tit:"1.hell.one-story"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"2.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"3.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"4.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"5.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"6.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"7.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"8.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"9.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"10.Nazo Game"
+                },
+
+
+
+            ]
+        }
+    })
+</script>
+<script>
+    function closeNav(){
+        document.getElementById("side").style.display = "none";
+    }
+    function openNav(){
+        document.getElementById("side").style.display = "block";
+
+    }
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>funning</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    html{
+      font-size: 62.5%;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      /*相对于body，将body设置为绝对定位*/
+      position:absolute;
+      /*相对于水平轴居中*/
+      justify-content: center;
+      /*相对于交叉（垂直）轴居中*/
+      align-items: center;
+      border: 1px solid;
+    }
+    h1{
+      font-size: 9.1rem;
+      text-align: center;
+      display: block;
+    }
+    .btn{
+      padding: 3.9rem 3.8rem;
+      font-size: 3.1rem;
+      margin: 1.0rem;
+    }
+    .btns{
+      height:26.0rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*文字跑马灯----------------------------------------------------------------*/
+    .tips_marquee {
+      background-color: #ffffff;
+      height: 4rem;
+      width:100%;
+      display: flex;
+      justify-content: center;
+    }
+    .tips_marquee_div{
+      height:8rem;
+      overflow:hidden;
+      margin-right: 2rem;
+    }
+    /*左侧喇叭的框*/
+    .left{
+      display: inline-block;
+      height: 8rem;
+      width: 48rem;
+      background:white;
+      padding-left:2rem;
+      padding-right:2rem;
+      float:left;
+    }
+    .tips_marquee_msg {
+
+      background-color: #ffffff;
+      font-size: 1.4rem;
+      color:#808080;
+      display: inline-block;
+      width:100%;
+      white-space: nowrap;
+      word-wrap: normal;
+      animation: marquee 50s linear infinite;
+
+    }
+    @keyframes marquee {
+      0% {
+        transform: translateX(400%);
+      }
+      100% {
+        transform: translateX(-580%);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <h1>funning</h1>
+  <div class="btns">
+    <a class="btn btn-default" href="fun_game.html" role="button">有趣的游戏</a>
+    <a class="btn btn-default" href="Useful_tools.html" role="button">实用的工具</a>
+    <a class="btn btn-default" href="boring.html" role="button">无聊的网页</a>
+    <a class="btn btn-default" href="Shocking_web.html" role="button">震撼的网页</a>
+  </div>
+  <div class="tips_marquee"><!--文字跑马灯-->
+    <div class="left"><div class="media-icon-msg"></div>
+      <div class="tips_marquee_div">
+        <p  class="tips_marquee_msg">注意：任何第三方机构或个人，以提额名义索要账号密码的，都是骗子，请勿透漏！</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

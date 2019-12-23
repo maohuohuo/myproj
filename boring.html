@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>无聊的网页</title>
+    <link rel="stylesheet" href="css/funning.css">
+    <link rel="stylesheet" type="text/css" href="sourse/normalize.css"><!--排印-->
+    <link rel="stylesheet" href="sourse/font_1496948_xwjlv6h5tz/iconfont.css"><!--图标字体-->
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><!--响应式布局-->
+</head>
+<body>
+<div class="sidenov"><!--侧边栏-->
+    <span style="font-size:30px; cursor:pointer" onclick="openNav()" class="dakai">&#9776;</span>
+    <div id="leftside">
+        <div id="side" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: white">&times;</a>
+            <ul class="myside">
+                <li><a href="index.html">首页</a></li>
+                <li><a class="btn btn-default" href="fun_game.html" role="button">有趣的游戏</a></li>
+                <li><a class="btn btn-default" href="Useful_tools.html" role="button">实用的工具</a></li>
+                <li><a class="btn btn-default" href="boring.html" role="button">无聊的网页</a></li>
+                <li><a class="btn btn-default" href="Shocking_web.html" role="button">震撼的网页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="nov"><!--导航栏-->
+    <ul>
+        <li class="nov_left"><a href="index.html">首页</a></li>
+        <li class="nov_right"><a href="#"><i class="iconfont icongerenzhongxin"></i> 个人中心</a></li>
+        <li class="nov_right"><a href="login.html">登陆</a></li>
+    </ul>
+</div>
+<div class="main-body"><!--总体-->
+    <div class="Sidebar"><!--侧边栏-->
+        <h3>热门</h3>
+        <ul class="hot" id="app1">
+            <li v-for="hot in hot"><a v-bind:href="hot.link">{{hot.tit}}</a></li>
+        </ul>
+
+    </div>
+    <div class="content"><!--主要内容-->
+        <div class="content_top"><!--头部-->
+            <form action="#">
+                <input type="text" name="sosuo" class="sousuo">
+                <a href="#"><i class="iconfont iconRectangleCopy"></i></a>&nbsp<a href="#"><input type="submit" name="so" value="搜索"></a>
+            </form>
+            <h2>无聊的网页推荐</h2>
+            <div class="recommend"  id="app2" >
+                <div class="recomend_img" v-for="pic in pic">
+                    <a v-bind:href=pic.hre><img v-bind:src=pic.img alt="图片" ></a>
+                    <span class="tit">{{pic.tit}}<p>{{pic.recon}}</p></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="content_buttom"><!--底部-->
+        <p>制作人：卯升获</p>
+        <p>来源:网络</p>
+    </div>
+</div>
+</body>
+<script src="sourse/vue.js"></script>
+<script>
+    let vn=new Vue({
+        el:'#app2',
+        data:{
+            pic:[
+                {
+                    hre:"http://protobot.org",
+                    img:"img/boring_001.png",
+                    tit:"随机生成无厘头设计任务",
+                    recon:"很无聊"
+                },
+                {
+                    hre:"https://www.prettyscale.com/",
+                    img:"img/pic_111.png",
+                    tit:"在线颜值测评",
+                    recon:"是一个在线测试颜值的网友"
+                },
+                {
+                    hre:"https://www.stick-of-gum.com/",
+                    img:"img/pic_003.png",
+                    tit:"口香糖恶搞",
+                    recon:"可以在线用口香糖恶搞你的朋友"
+                },
+                {
+                    hre:"http://www.friv.com/",
+                    img:"img/boring_1252.png",
+                    tit:"264个好玩的FLASH游戏",
+                    recon:"页上陈列了264个FLASH游戏，每个游戏的左边都有详细的操作指南，游戏页面设计很完美，"
+                },
+                {
+                    hre:"https://mrdoob.com/projects/chromeexperiments/google-sphere/",
+                    img:"img/boring_32.png",
+                    tit:"Google Sphere",
+                    recon:"谷歌首页的元素形成了一个球体"
+                },
+                {
+                    hre:"https://baidujingzi.com/",
+                    img:"img/boring_67.png",
+                    tit:"百度镜子",
+                    recon:"镜子里的百度"
+                },
+                {
+                    hre:"http://flipanim.com/",
+                    img:"img/boring_094.ico",
+                    tit:"FlipAnim",
+                    recon:"可以手绘的网页"
+                },
+                {
+                    hre:"https://theuselessweb.com/",
+                    img:"img/boring_010.ico",
+                    tit:"Useless Web",
+                    recon:"点一下please就会弹出一个有无聊又好玩基本上没用的网站出来，玩一天根本停不下来"
+                },
+                {
+                    hre:"http://www.adoutu.com/index",
+                    img:"img/boring_055.ico",
+                    tit:"爱斗图",
+                    recon:"论表情包的重要性"
+                },
+                {
+                    hre:"http://kedou.workerman.net/",
+                    img:"img/boring_01.ico",
+                    tit:"小蝌蚪互动聊天室",
+                    recon:"就是个匿名聊天室，直接在屏幕上打字就可以聊天"
+                },
+                {
+                    hre:"https://mrdoob.com/lab/javascript/effects/solitaire/",
+                    img:"img/boring_003.ico",
+                    tit:" 跳跃的扑克牌",
+                    recon:"点击鼠标就会有扑克牌跳下来并且不断地弹弹弹一直到弹出屏幕"
+                },
+                {
+                    hre:"https://www.humancalendar.com/",
+                    img:"img/boring_009.ico",
+                    tit:"创意真人日历",
+                    recon:"有创意的在线真人版日历，所有天数和星期都由人物图片构成，日历上所有的人，都会看着拿今天日期牌子的那个人"
+                },
+                {
+                    hre:"http://www.20q.net/",
+                    img:"img/boring_618.gif",
+                    tit:"猜出你在想什么",
+                    recon:"想象一个物体，然后回答20个小问题，系统就能猜出来你想的是什么"
+                },
+                {
+                    hre:"http://www.dayong.name/",
+                    img:"img/boring_004.ico",
+                    tit:"大勇和小花的旅行日记",
+                    recon:"日记里的男女主角——大勇和小花，他们用浪漫背包旅行记录着点滴爱情。一个负责摄影，一个负责文字，一路走来，携手看尽细水流长"
+                },
+                {
+                    hre:"https://www.rainymood.com/",
+                    img:"img/boring_008.ico",
+                    tit:"听雨声",
+                    recon:"打开此网站后，里面会一直都在下雨，雨声能让烦躁的心慢慢平静下来。"
+                }
+            ]
+        }
+    })
+</script>
+<script>
+    let vn1=new Vue({
+        el:'#app1',
+        data:{
+            hot:[
+                {
+                    link:"http://protobot.org/#en",
+                    tit:"1.protobot"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"2.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"3.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"4.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"5.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"6.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"7.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"8.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"9.Nazo Game"
+                },
+                {
+                    link:"http://nazo.one-story.cn/",
+                    tit:"10.Nazo Game"
+                },
+
+
+
+            ]
+        }
+    })
+</script>
+<script>
+    function closeNav(){
+        document.getElementById("side").style.display = "none";
+    }
+    function openNav(){
+        document.getElementById("side").style.display = "block";
+
+    }
+</script>
+</html>

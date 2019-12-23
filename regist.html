@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>注册</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+    initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+</head>
+<body>
+	<form id="myform" name="myform" onsubmit="return verification()" method="post" action="../../vuestudy/vue基础篇/registsuccess.html" style="width: 500px;height: 500px;">
+		<fieldset>
+			<legend>登陆</legend>
+			<p>
+				&nbsp&nbsp<label for="username">用户名：</label>
+				<input type="text" name="username" id="username" placeholder="输入3-8位用户名，以字母开头">
+			</p>
+			<p>
+				&nbsp&nbsp&nbsp&nbsp<label for="password" >密码：</label>
+				<input type="password" name="password" id="password" placeholder="请输入6-11位密码">
+			</p>
+			<p>
+				<label for="repassword">确认密码：</label>
+				<input type="password" name="repassword" id="repassword" placeholder="确认密码">
+			</p>
+			<p>
+				<input type="submit" name="log" value="注册">
+			</p>
+
+		</fieldset>
+		</form>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+		<script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+		<script type="text/javascript">
+			// $("#myform").validate({
+			// 	rules:{
+			// 		username:"required",
+			// 		password:"required",
+			// 		repassword:{
+			// 			equalTo:"#password"
+			// 		}
+			// 	}
+			// });
+			// 
+			 function verification(){
+				//用户名验证
+				var username=document.forms['myform']['username'].value;
+				if (username < 'A' ||(username > 'Z' && username < 'a') || username > 'z') {
+				   if(username.length<3||username.length>8){
+				   		alert("用户名长度必须在3-8之间！");
+					    return false;
+				   }
+				   alert("用户名必须以字母开头！");
+						return false;
+					
+				}
+
+				//密码验证
+				var password=document.forms['myform']['password'].value;
+				if (password.length<6||password.length>11) {
+					alert("密码长度在6-11之间！");
+					    return false;
+				}
+				//确认密码
+				var repassword=document.forms['myform']['repassword'].value;
+				if (password!=repassword) {
+					alert('前后密码输入不一致，请重新输入');
+					return false;
+				}
+						
+			}
+		</script>
+</body>
+</html>
