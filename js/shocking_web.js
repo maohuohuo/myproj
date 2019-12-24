@@ -1,0 +1,90 @@
+let vn=new Vue({
+    el:'#app1',
+    data:{
+        pic:[
+            {
+                hre:"iehttp://www.species-in-pces.com/",
+                img:"img/pic01.ico",
+                tit:"Inyerfaces",
+                recon:"是一个公益网站，它们希望通过这样的方式来呼吁人们更多的关注这些濒临灭绝的动物们。"
+            },
+            {
+                hre:"http://www.nicetool.net/",
+                img:"img/shok_032.ico",
+                tit:"Nicetool",
+                recon:"各种工具抠图，视频录制等"
+            },
+            {
+                hre:"https://neets.cc/",
+                img:"img/shok_723.ico",
+                tit:"Neets",
+                recon:"追剧必备网站"
+            },
+            {
+                hre:"http://hao.shejidaren.com/",
+                img:"img/shok_015.ico",
+                tit:"设计导航",
+                recon:"设计师导航"
+            },
+            {
+                hre:"https://weavi.com/962871",
+                img:"img/shok_006.ico",
+                tit:"weavi",
+                recon:"一个和本网站类似的网站"
+            },
+            {
+                hre:"http://www.lunatiscenografie.it/",
+                img:"img/default.jpg",
+                tit:"Lunati Scenografie",
+                recon:"行使涂鸦创意。尽管项目功能许多的草图伴随图片和渲染,他们不会压服在线访客。"
+            },
+            {
+                hre:"https://wxyzwebcams.com/",
+                img:"img/shock_038.jpg",
+                tit:"wxyzwebcams",
+                recon:"一个可以查看全球摄像头的网站"
+            },
+            {
+                hre:"https://bigjpg.com/",
+                img:"img/shock_003.ico",
+                tit:"Bigjpg",
+                recon:"AI智能无损放大图片"
+            },
+            {
+                hre:"https://duotones.co/",
+                img:"img/shock_99.jpg",
+                tit:"双色调图片生成器",
+                recon:"双色调图片生成器"
+            }
+        ],
+        hot:[
+            {
+                link:"iehttp://www.species-in-pces.com/",
+                tit:"1.Inyerfaces"
+            },
+            {
+                link:"http://www.nicetool.net/",
+                tit:"2.Nicetool"
+            },
+            {
+                link:"https://neets.cc/",
+                tit:"3.Neets"
+            },
+            {
+                link:"http://hao.shejidaren.com/",
+                tit:"4.设计导航"
+            },
+            {
+                link:"https://wxyzwebcams.com/",
+                tit:"5.wxyzwebcams"
+            }
+        ]
+    }
+});
+function closeNav(){
+    document.getElementById("side").style.display = "none";
+}
+function openNav(){
+    document.getElementById("side").style.display = "block";
+
+}

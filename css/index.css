@@ -1,0 +1,29 @@
+html{
+    font-size: 62.5%;
+}
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+#myform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+fieldset{
+    width:30rem;
+    height: 30rem;
+
+}
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30rem;
+    /*height:*/
+}

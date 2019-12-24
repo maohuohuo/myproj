@@ -50,6 +50,7 @@ img{
 }
 /*侧边栏---------------------------------------------------------*/
 .Sidebar{
+    padding-top: 14rem;
     min-height: 100rem;
     text-align: center;
     width: 15%;
@@ -109,7 +110,7 @@ h2{
 .content_buttom{
     clear: both;
     background-color: #222222;
-    color: #d0ffae;
+    color: #fffffb;
     text-align: center;
 }
 /*响应式布局----------------------------------------------------------------*/
@@ -154,6 +155,7 @@ h2{
     }
     .sousuo{
         width: 30rem;
+        color: #222222;
     }
     .content_buttom{
         display: none;
@@ -190,7 +192,7 @@ h2{
 #leftside{
     float: left;
     transition: 0.5s;
-    background-color: #f5ffec;
+    background-color: #fffbf0;
 
 }
 .closebtn{

@@ -1,0 +1,77 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*相对于body，将body设置为绝对定位*/
+    position:absolute;
+    /*相对于水平轴居中*/
+    justify-content: center;
+    /*相对于交叉（垂直）轴居中*/
+    align-items: center;
+    border: 1px solid;
+}
+h1{
+    font-size: 9.1rem;
+    text-align: center;
+    display: block;
+}
+.btn{
+    padding: 3.9rem 3.8rem;
+    font-size: 3.1rem;
+    margin: 1.0rem;
+}
+.btns{
+    height:26.0rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*文字跑马灯----------------------------------------------------------------*/
+.tips_marquee {
+    background-color: #ffffff;
+    height: 4rem;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.tips_marquee_div{
+    height:8rem;
+    overflow:hidden;
+    margin-right: 2rem;
+}
+/*左侧喇叭的框*/
+.left{
+    display: inline-block;
+    height: 8rem;
+    width: 48rem;
+    background:white;
+    padding-left:2rem;
+    padding-right:2rem;
+    float:left;
+}
+.tips_marquee_msg {
+
+    background-color: #ffffff;
+    font-size: 1.4rem;
+    color:#808080;
+    display: inline-block;
+    width:100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    animation: marquee 50s linear infinite;
+
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(400%);
+    }
+    100% {
+        transform: translateX(-580%);
+    }
+}
