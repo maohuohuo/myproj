@@ -89,6 +89,7 @@
 <body>
 <div class="box">
   <h1>funning</h1>
+  <p>欢迎你！<span id="user"></span></p>
   <div class="btns">
     <a class="btn btn-default" href="fun_game.html" role="button">有趣的游戏</a>
     <a class="btn btn-default" href="Useful_tools.html" role="button">实用的工具</a>
@@ -98,10 +99,17 @@
   <div class="tips_marquee"><!--文字跑马灯-->
     <div class="left"><div class="media-icon-msg"></div>
       <div class="tips_marquee_div">
-        <p  class="tips_marquee_msg">注意：任何第三方机构或个人，以提额名义索要账号密码的，都是骗子，请勿透漏！</p>
+        <p class="tips_marquee_msg">注意：任何第三方机构或个人，以提额名义索要账号密码的，都是骗子，请勿透漏！</p>
       </div>
     </div>
   </div>
 </div>
 </body>
+<script src="package/src/js.cookie.js"> </script>
+<script type="text/javascript" >
+  var x=Cookies.get('username');
+  var user=document.getElementById("user");
+  alert(x);
+  user.innerHTML=x;
+</script>
 </html>

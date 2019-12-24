@@ -33,22 +33,22 @@
         <li class="nov_right"><a href="login.html">登陆</a></li>
     </ul>
 </div>
-<div class="main-body"><!--总体-->
+<div class="main-body" id="app1"><!--总体-->
     <div class="Sidebar"><!--侧边栏-->
         <h3>热门</h3>
-        <ul class="hot" id="app1">
+        <ul class="hot" >
             <li v-for="hot in hot"><a v-bind:href="hot.link">{{hot.tit}}</a></li>
         </ul>
 
     </div>
-    <div class="content"><!--主要内容-->
+    <div class="content"  id="app2"><!--主要内容-->
         <div class="content_top"><!--头部-->
             <form action="#">
-                <input type="text" name="sosuo" class="sousuo">
+                <input type="text" name="sosuo" class="sousuo" v-model="search" @click="btn">
                 <a href="#"><i class="iconfont iconRectangleCopy"></i></a>&nbsp<a href="#"><input type="submit" name="so" value="搜索"></a>
             </form>
             <h2>无聊的网页推荐</h2>
-            <div class="recommend"  id="app2" >
+            <div class="recommend"  >
                 <div class="recomend_img" v-for="pic in pic">
                     <a v-bind:href=pic.hre><img v-bind:src=pic.img alt="图片" ></a>
                     <span class="tit">{{pic.tit}}<p>{{pic.recon}}</p></span>

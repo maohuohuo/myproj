@@ -16,31 +16,31 @@
 			align-items: center;
 			width: 100%;
 			height: 100%;
-			
+
 		}
 		#myform{
 			display: flex;
 			justify-content: center;
-			align-items: center; 
+			align-items: center;
 			flex-direction:column;
 		}
 		fieldset{
-			 width:30rem; 
+			 width:30rem;
 			 height: 30rem;
-			
+
 		}
 		p{
-			 display: flex; 
-			 align-items: center; 
+			 display: flex;
+			 align-items: center;
 			 justify-content: center;
-			 width:30rem; 
-			 height: 
-			
+			 width:30rem;
+			 /*height:*/
+
 		}
 	</style>
 </head>
 <body>
-	<form id="myform" name="myform" onsubmit="return verification()" method="post"  action="../../vuestudy/vue基础篇/loginsucess.html">
+	<form  id="myform" name="myform" onsubmit="return verification()"  action="index.html" method="post">
 		<fieldset>
 			<legend>登陆</legend>
 			<div class="contain">
@@ -58,41 +58,36 @@
 			</p>
 			</div>
 		</fieldset>
-		</form>
-		<div id="test"></div>
+    </form>
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 		<script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 		<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
-		<script type="text/javascript">
-
+    <script  src="package/src/js.cookie.js"></script>
+    <script type="text/javascript">
 			function verification() {
-				//用户名验证
-				var username = document.getElementById('username');
-				var test = document.getElementById("test");
-				var user = username.value;
+                //用户名验证
+                var username=document.forms["myform"]["username"].value;
+                if (username < 'A' ||(username > 'Z' && username < 'a') || username > 'z') {
+                    if(username.length<3||username.length>8){
+                        alert("用户名长度必须在3-8之间！");
+                        return false;
+                    }
+                    alert("用户名必须以字母开头！");
+                    return false;
 
+                }else{
+                    Cookies.set('username', username);
+                }
 
-				if (username < 'A' || (username > 'Z' && username < 'a') || username > 'z') {
-					if (username.length < 3 || username.length > 8) {
-						alert("用户名长度必须在3-8之间！");
-						return false;
-					}
-					alert("用户名必须以字母开头！");
-					return false;
+                //密码
+                var password=document.forms["myform"]["password"].value;
+                if (password.length<6||password.length>15) {
+                    alert("请输入密码！");
+                    return false;
+                }
 
-				} else {
-					document.cookie = "username=" + username + "path=/";
-				}
-				密码验证
-				var password = document.forms['myform']['password'].value;
-				if (password.length < 6 || password.length > 11) {
-					alert("密码长度在6-11之间！");
-					return false;
-				}
-			}
+            }
 		</script>
-
 </body>
 </html>
