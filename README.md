@@ -6,7 +6,7 @@
 [有趣的网页推荐](https://maohuohuo.github.io/myproj/index.html)
 
 ### 项目链接(分支)
-[https://github.com/maohuohuo/myproj/tree/gh-pages] https://github.com/maohuohuo/myproj/tree/gh-pages
+[https://github.com/maohuohuo/myproj/tree/gh-pages](https://github.com/maohuohuo/myproj/tree/gh-pages)
 
 ## 项目技术
 * html+css+javascript
