@@ -4,8 +4,9 @@
 
 #### 项目连接
 [有趣的网页推荐](https://maohuohuo.github.io/myproj/index.html)
-### 项目文件链接(分支)
-[https://github.com/maohuohuo/myproj/tree/gh-pages]https://github.com/maohuohuo/myproj/tree/gh-pages
+
+### 项目链接(分支)
+[https://github.com/maohuohuo/myproj/tree/gh-pages] https://github.com/maohuohuo/myproj/tree/gh-pages
 
 ## 项目技术
 * html+css+javascript
@@ -19,6 +20,8 @@
 4. 一个基本布局（flex,float）
 5. 响应式布局
 6. 跑马灯
+7. cookie
+8. 登陆客户端验证
 
 ## 项目功能
 1. 有趣
@@ -31,5 +34,3 @@
   * 将来可以将自己觉得不错的网站写在上面，起到收藏的作用。
 5. 打发时间
   * 里面有很多无聊的小游戏，可以玩一整天。
-
-
