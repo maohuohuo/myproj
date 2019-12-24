@@ -3,7 +3,7 @@
 > A Vue.js project
 
 #### 项目连接
-[有趣的网页推荐](https://maohuohuo.github.io/myproj/index.html)
+[有趣的网页推荐](https://maohuohuo.github.io/myproj/first_page.html)
 
 ### 项目链接(分支)
 [https://github.com/maohuohuo/myproj/tree/gh-pages](https://github.com/maohuohuo/myproj/tree/gh-pages)
@@ -15,6 +15,7 @@
 
 ## 网站包含
 1. 表单（搜索，登陆）
+  (登录功能github上跳转页面405，本地可以)
 2. 导航栏
 3. 侧边栏
 4. 一个基本布局（flex,float）
